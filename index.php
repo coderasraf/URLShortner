@@ -13,8 +13,8 @@
 	<div class="wrapper">
 	<form action="">
 	<i class="url-icon uil uil-link"></i>
-	<input type="text" placeholder="Enter or paste a lonk link" required>
-	<button>Shorten</button>
+	<input id="fullURL" type="text" placeholder="Enter or paste a lonk link" required>
+	<button id="shortenBTN">Shorten</button>
 	</form>
 
 	<div class="count">
@@ -97,5 +97,7 @@
 			<button class="save-btn">Save</button>
 		</form>
 	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
