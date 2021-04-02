@@ -1,3 +1,19 @@
+<?php include 'php/config.php'; ?>
+<?php
+
+if(isset($_GET['u'])){
+	
+	$u = mysqli_real_escape_string($conn, $_GET['u']);
+
+	$sql = mysqli_query($conn, "SELECT full_url FROM url_table WHERE shorten_url = '{$u}'");
+
+		$fullUrl = mysqli_fetch_array($sql);
+		Header("Location:".$fullUrl['full_url']);
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +29,7 @@
 	<div class="wrapper">
 	<form action="">
 	<i class="url-icon uil uil-link"></i>
-	<input id="fullURL" type="text" placeholder="Enter or paste a lonk link" required>
+	<input name="fullURL" id="fullURL" type="text" placeholder="Enter or paste a lonk link" required>
 	<button id="shortenBTN">Shorten</button>
 	</form>
 
@@ -92,7 +108,7 @@
 		</div>
 		<form action="#">
 			<label for="edit">Edit Your shortlink</label>
-			<input type="text" value="example.com/xyz" spellcheck="false">
+			<input id="shortenURL" type="text" value="" spellcheck="false">
 			<i class="copy-icon uil uil-copy-alt"></i>
 			<button class="save-btn">Save</button>
 		</form>
