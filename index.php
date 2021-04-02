@@ -9,6 +9,12 @@
 
 </head>
 <body>
-	
+	<div class="wrapper">
+	<form action="">
+	<i class="url-icon uil uil-link"></i>
+	<input type="text" placeholder="Enter or paste a lonk link">
+	<button>Shorten</button>
+	</form>
+	</div>
 </body>
 </html>
