@@ -22,6 +22,7 @@ const shortenURL = document.querySelector('#shortenURL');
                     popupBox.classList.add('show');
                     let domain = "localhost/url?u=";
                     shortenURL.value = domain + data;
+                    console.log(data);
                 }else{
                     alert(data);
                 }
